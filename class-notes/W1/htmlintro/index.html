@@ -1,0 +1,180 @@
+<!-- html syntax for comments -->
+<!-- Ctrl/ toggle commented code-->
+<!-- the "doctype", document type declaration -->
+<!-- doctype for html5 is just "<!DOCTYPE html>"" -->
+<!-- with no doctype for html5, probably going to assume some legacy/ 
+    compatibility old HTML behavior -->
+<!DOCTYPE html>
+<!-- HTML element-->
+<html>
+    <!-- HEAD element, for metadeta, data about the document's contents -->
+<head>
+    <!--ASCII encoding baseline-->
+    <!-- unicode is a namespace of charaters -->
+    <!--"UTF-8" is the standard encoding for Unicode-->
+    <meta charset="utf-8" /> <!-- (self closing tag)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--title element is for the name of the tab/window-->
+    <title>Page Title</title>
+    <!--this defines some initial display parameters for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import an external style sheet (css - file)-->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- import an external script (JS file)-->
+    <script src="main.js"></script>
+    <!-- meta name="something"-->
+    <!-- aplication-name -- name of webapp-->
+    <!-- author -->
+    <!-- description -->
+    <!-- keywords -->
+    <!-- used to be used for SEO - serach engine optiimization-->
+    <!-- robots -->
+</head>
+<!--Body elemeny, the page contents themselves -->
+<body>
+    <!-- whitespace doesn't matter, css controls layout like this -->
+    Hello,      world!
+
+    Goodbye, world!
+    <p>Paragraph</p>s
+    <h1>Header1</h1>
+    <h2>Header2</h2>
+    <h3>Header3</h3>
+    <img src="shaggy.png">
+    <!-- <a> = "anchor" tag for hyperlinks-->
+    <!-- "alt" atribute fir alternative text when image can't be loaded/displayed -->
+    <a href="https://google.com">Link to Google</a>
+    <!-- we have target="_blank" on links-->
+    <ol><!-- ordered list-->
+<li><!-- list item -->
+    item 1
+</li>
+<li>
+    item 2
+</li>
+<li>
+    item 3
+</li>
+    </ol>
+    <ul><!--unordered lists-->
+            <li>
+                    item 3
+                </li>
+                <li>
+                    item 1
+                </li>
+                <li>
+                    item 3
+                </li> 
+    </ul>
+    <!-- <br> = line break -->
+    <p>One Line <br> Two Line</p>
+    <!-- italic by default-->
+    <p><em>Emphasize</em> text</p>
+    <!-- bold by default -->
+    <p><strong>"Strong"</strong> text</p>
+    <p><u>Underlined</u> text</p>
+    <blockquote>Indented (by defult) quotation of some kind</blockquote>
+    <!-- in HTML, we have block elements and inline elements-->
+    <!-- block elements own their own vertical space -->
+    <!-- examples: p, h1, ol, li, blockquote-->
+    <!-- inline elements do not, happily occupy the same line-->
+    <!-- examples: br, em, strong, u, img, a -->
+    <div>div is a general bloclk element for anything that 
+        doesn't already have a tag defined
+    </div>
+    <span> 
+        span is a generic inline element for when
+        there's no tag for that
+    </span>
+    <table>
+        <thead>
+            <tr> <!-- table row-->
+                <th> Column 1<!-- table header cell--> </th>
+                <th> Column 2 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>value 1</td> <!-- table data-->
+                <td>value 2</td>
+            </tr>
+            <tr>
+                <td>value 3</td>
+                <td> value 4</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- because VS Code is saving this file as UTF-8-->
+    <!-- AND because it's declared charset is UTF-8 -->
+    <p> Chữ Nôm</p>
+    <!-- character refrences -->
+    <!-- tell the browser to render a character without -->
+    <!-- lierally having it in this file -->
+    <p>&lt;</p> <!-- "lt for less than-->
+    <p>&gt;</p> <!-- gt for greather than-->
+    <p>&amp;</p> <!-- amp for ampersand-->
+    <!-- sometimes called html codes -->
+    <p>&copy;</p>
+    <!-- often you should put the charcter directly in the html -->
+    <!-- except for whitespace like &nbsp; -->
+    &#1289; <!-- decimal unicode reference-->
+    &#x20AB; <!-- hexidecimal unicoed refernce-->
+    <select> <!-- selected list = dropdown list-->
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+    </select>
+    <!-- some new elements in HTML 5;-->
+    <video ></video>
+    <audio></audio>
+    <!-- replace plugins like falsh with native A/V
+    support-->
+    <!-- can specofy more than one source file with different codex, -->
+    <!-- let each browser download the one it can play -->
+    <!-- transcription support -->
+    <canvas></canvas>
+    <!-- area on screen to draw graphics primitives onto, allowing some
+    dynamic behavior -- lije for "Flash Games"-->
+    <!-- accessibility big focus for HTML 5 -->
+    <!-- e.g. many ARIA attributes to help screen readers etc.. -->
+    <!-- <div class="selection">-->
+    <!-- block elements with a structural meaning -->
+    <selection></selection>
+    <article></article>
+    <footer></footer>
+    <header></header>
+    <nav></nav>
+    <!-- forms-->
+    <!-- basic HTTP, you have get method and POST method -->
+    <!-- GET requests have only URl -->
+    <!-- typically, forms use Post, and send key-value pairs to the server
+    in the HTTP request body. -->
+    <form method="GET" action="https://www.google.com/search">
+        <!-- input elements provide a key-value pair -->
+        <!-- to the form as a whole to be submitted -->
+        <!-- the key will be from the "name" attr. -->
+        <input type="text" name="q">
+        <!-- naming this "q" because that's what google uses -->
+        <input type="submit">
+    </form>
+    <form method="POST">
+        <label for="num">Enter number:</label>
+        <input type="number" name="num" id="num">
+        <label>Enter true/false:
+        <input type="checkbox" name="bool">
+        </label>
+        <!-- HTMl shorthand - an attribute without a value, the value is the attribute -->
+        <input type="text" name="username" placeholder="Username" required="required" required minlength="6">
+        <br>
+        <input type="password" placeholder="Password">
+        <input type="range" min="0" max="1000">
+        <input type="date">
+        <input type="color">
+        <input type="file">
+        <label>option 1:<input type="radio" name="which" value="1"></label>
+        <label>option 2:<input type="radio" name="which" value="2"></label>
+        <input type="submit">
+    </form>
+    </body>
+</html>
